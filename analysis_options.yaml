@@ -1,0 +1,19 @@
+include: package:flutter_lints/flutter.yaml
+
+analyzer:
+  strong-mode: true
+
+linter:
+  rules:
+    - camel_case_types: true
+    - empty_constructor_bodies: true
+    - annotate_overrides: true
+    - avoid_init_to_null: true
+    - constant_identifier_names: true
+    - one_member_abstracts: true
+    - slash_for_doc_comments: true
+    - sort_constructors_first: true
+    - unnecessary_brace_in_string_interp: true
+    - always_declare_return_types: true
+    - avoid_print: false
+    - prefer_single_quotes: true
