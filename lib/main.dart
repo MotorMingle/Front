@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:front/src/themes/app_theme.dart';
+import 'package:front/src/ui/gradient_builder.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,6 +22,7 @@ class MyApp extends StatelessWidget {
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
+
   final String title;
 
   @override
@@ -27,14 +30,6 @@ class MyHomePage extends StatefulWidget {
 }
 
 class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      _counter++;
-    });
-  }
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -45,20 +40,32 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headlineMedium,
+            Container(
+              width: 80,
+              height: 80,
+              decoration: BoxDecoration(
+                gradient: GradientBuilder(
+                        AppTheme.colors.gradientColors.yellowToRed,
+                        AppTheme.colors.gradientStops.yellowToRed)
+                    .center(const Alignment(-0.4, 1.2))
+                    .radius(1.2)
+                    .buildRadial(),
+                borderRadius: BorderRadius.circular(25),
+              ),
+              child: Container(
+                decoration: BoxDecoration(
+                  gradient: GradientBuilder(
+                          AppTheme.colors.gradientColors.darkRedToTransparent,
+                          AppTheme.colors.gradientStops.darkRedToTransparent)
+                      .begin(const Alignment(-0.7, -1))
+                      .end(const Alignment(0, 0.5))
+                      .buildLinear(),
+                  borderRadius: BorderRadius.circular(25),
+                ),
+              ),
             ),
           ],
         ),
-      ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
       ),
     );
   }
