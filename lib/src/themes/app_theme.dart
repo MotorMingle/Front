@@ -4,14 +4,11 @@ import 'colors.dart';
 
 @immutable
 class AppTheme {
-  static const colors = AppColors();
+  static AppColors colors = AppColors();
 
   const AppTheme._();
 
   static ThemeData define() {
-    return ThemeData(
-      primaryColor: colors.red,
-      colorScheme: ColorScheme.fromSwatch().copyWith(secondary: colors.orange),
-    );
+    return ThemeData();
   }
 }
