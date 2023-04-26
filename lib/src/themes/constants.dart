@@ -21,7 +21,7 @@ class GradientRadius {
 }
 
 class BorderRadius {
-  final global = 1.2;
+  final global = 25.0;
 }
 
 class ButtonSize {
