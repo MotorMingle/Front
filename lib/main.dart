@@ -41,26 +41,28 @@ class _MyHomePageState extends State<MyHomePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
             Container(
-              width: 80,
-              height: 80,
+              width: AppTheme.constants.buttonSize.width,
+              height: AppTheme.constants.buttonSize.height,
               decoration: BoxDecoration(
                 gradient: GradientBuilder(
                         AppTheme.colors.gradientColors.yellowToRed,
                         AppTheme.colors.gradientStops.yellowToRed)
-                    .center(const Alignment(-0.4, 1.2))
-                    .radius(1.2)
+                    .center(AppTheme.constants.gradientAlignments.center)
+                    .radius(AppTheme.constants.gradientRadius.global)
                     .buildRadial(),
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.circular(
+                    AppTheme.constants.borderRadius.global),
               ),
               child: Container(
                 decoration: BoxDecoration(
                   gradient: GradientBuilder(
                           AppTheme.colors.gradientColors.darkRedToTransparent,
                           AppTheme.colors.gradientStops.darkRedToTransparent)
-                      .begin(const Alignment(-0.7, -1))
-                      .end(const Alignment(0, 0.5))
+                      .begin(AppTheme.constants.gradientAlignments.begin)
+                      .end(AppTheme.constants.gradientAlignments.end)
                       .buildLinear(),
-                  borderRadius: BorderRadius.circular(25),
+                  borderRadius: BorderRadius.circular(
+                      AppTheme.constants.borderRadius.global),
                 ),
               ),
             ),
