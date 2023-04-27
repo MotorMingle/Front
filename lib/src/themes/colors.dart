@@ -2,45 +2,54 @@ import 'package:flutter/material.dart';
 
 @immutable
 class AppColors {
-  final GradientColors gradientColors = GradientColors();
-  final GradientStops gradientStops = GradientStops();
+  Colors get colors => const Colors();
 
-  AppColors();
+  GradientColors get gradientColors => const GradientColors();
+
+  GradientStops get gradientStops => const GradientStops();
+
+  const AppColors();
 }
 
 class Colors {
-  final yellow = const Color(0xfff1c864);
-  final lightOrange = const Color(0xffeb9a3f);
-  final orange = const Color(0xffe2793f);
-  final darkOrange = const Color(0xffe5514c);
-  final red = const Color(0xffda2f24);
-  final transparent = const Color(0x00000000);
-  final red20 = const Color(0x05c43a32);
-  final red70 = const Color(0x20c43a32);
-  final deepRed = const Color(0x508d1c24);
-  final darkRed = const Color(0x90320a17);
+  static const yellow = Color(0xfff1c864);
+  static const lightOrange = Color(0xffeb9a3f);
+  static const orange = Color(0xffe2793f);
+  static const darkOrange = Color(0xffe5514c);
+  static const red = Color(0xffda2f24);
+  static const transparent = Color(0x00000000);
+  static const red20 = Color(0x05c43a32);
+  static const red70 = Color(0x20c43a32);
+  static const deepRed = Color(0x508d1c24);
+  static const darkRed = Color(0x90320a17);
+  static const lightGrey = Color(0xffe9e9ef);
+  static const grey = Color(0xff8c8cac);
 
   const Colors();
 }
 
 class GradientColors {
-  final darkRedToTransparent = [
-    const Colors().darkRed,
-    const Colors().deepRed,
-    const Colors().red70,
-    const Colors().red20,
-    const Colors().transparent,
+  static const darkRedToTransparent = [
+    Colors.darkRed,
+    Colors.deepRed,
+    Colors.red70,
+    Colors.red20,
+    Colors.transparent,
   ];
-  final yellowToRed = [
-    const Colors().yellow,
-    const Colors().lightOrange,
-    const Colors().orange,
-    const Colors().darkOrange,
-    const Colors().red,
+  static const yellowToRed = [
+    Colors.yellow,
+    Colors.lightOrange,
+    Colors.orange,
+    Colors.darkOrange,
+    Colors.red,
   ];
+
+  const GradientColors();
 }
 
 class GradientStops {
-  final darkRedToTransparent = [0.0, 0.2, 0.5, 0.8, 1.0];
-  final yellowToRed = [0.0, 0.2, 0.5, 0.8, 1.0];
+  static const darkRedToTransparent = [0.0, 0.2, 0.5, 0.8, 1.0];
+  static const yellowToRed = [0.0, 0.2, 0.5, 0.8, 1.0];
+
+  const GradientStops();
 }

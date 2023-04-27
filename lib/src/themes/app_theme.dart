@@ -5,8 +5,8 @@ import 'constants.dart';
 
 @immutable
 class AppTheme {
-  static AppColors colors = AppColors();
-  static AppConstants constants = AppConstants();
+  static const AppColors colors = AppColors();
+  static const AppConstants constants = AppConstants();
 
   const AppTheme._();
 
