@@ -1,7 +1,12 @@
 import 'package:flutter/material.dart';
 
+import '../ui/gradient_builder.dart';
+import 'colors.dart' as colors;
+
 @immutable
 class AppConstants {
+  Gradient get gradient => const Gradient();
+  
   GradientAlignments get gradientAlignments => const GradientAlignments();
 
   GradientRadius get gradientRadius => const GradientRadius();
@@ -15,6 +20,23 @@ class AppConstants {
   SizedBoxSize get sizedBoxSize => const SizedBoxSize();
 
   const AppConstants();
+}
+
+class Gradient {
+  static var primary = [
+    GradientBuilder(colors.GradientColors.yellowToRed,
+        colors.GradientStops.yellowToRed)
+        .center(GradientAlignments.center)
+        .radius(GradientRadius.global)
+        .buildRadial(),
+    GradientBuilder(colors.GradientColors.darkRedToTransparent,
+        colors.GradientStops.darkRedToTransparent)
+        .begin(GradientAlignments.begin)
+        .end(GradientAlignments.end)
+        .buildLinear(),
+  ];
+
+  const Gradient();
 }
 
 class GradientAlignments {
@@ -45,11 +67,11 @@ class MatchButtonSize {
 }
 
 class ActionButton {
-  static const paddingX = 20.0;
-  static const paddingY = 20.0;
-  static const fontSize = 20.0;
-  static const iconHeight = 20.0;
-  static const iconWidth = 20.0;
+  static const paddingX = 10.0;
+  static const paddingY = 5.0;
+  static const fontSize = 12.0;
+  static const iconHeight = 12.0;
+  static const iconWidth = 12.0;
 
   const ActionButton();
 }

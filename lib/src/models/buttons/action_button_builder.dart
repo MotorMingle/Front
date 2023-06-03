@@ -17,30 +17,56 @@ class ActionButtonBuilder {
   double? _iconHeight; // Child widget
   double? _iconWidth; // Child widget
 
-  ActionButtonBuilder(
-    String iconPath,
-    String text,
-    Color color,
-    VoidCallback onPressed, {
-    Color? backgroundColor = colors.Colors.lightGrey,
-    double? paddingX = constants.ActionButton.paddingX,
-    double? paddingY = constants.ActionButton.paddingY,
-    double? borderRadius = constants.BorderRadius.global,
-    double? fontSize = constants.ActionButton.fontSize,
-    double? iconHeight = constants.ActionButton.iconHeight,
-    double? iconWidth = constants.ActionButton.iconWidth,
-  }) {
+  ActionButtonBuilder(String iconPath,
+      String text,
+      Color color,
+      VoidCallback onPressed,) {
     _iconPath = iconPath;
     _text = text;
     _color = color;
     _onPressed = onPressed;
+    _backgroundColor = colors.Colors.lightGrey;
+    _paddingX = constants.ActionButton.paddingX;
+    _paddingY = constants.ActionButton.paddingY;
+    _borderRadius = constants.BorderRadius.global;
+    _fontSize = constants.ActionButton.fontSize;
+    _iconHeight = constants.ActionButton.iconHeight;
+    _iconWidth = constants.ActionButton.iconWidth;
+  }
+
+  ActionButtonBuilder backgroundColor(Color backgroundColor) {
     _backgroundColor = backgroundColor;
+    return this;
+  }
+
+  ActionButtonBuilder paddingX(double paddingX) {
     _paddingX = paddingX;
+    return this;
+  }
+
+  ActionButtonBuilder paddingY(double paddingY) {
     _paddingY = paddingY;
+    return this;
+  }
+
+  ActionButtonBuilder borderRadius(double borderRadius) {
     _borderRadius = borderRadius;
+    return this;
+  }
+
+  ActionButtonBuilder fontSize(double fontSize) {
     _fontSize = fontSize;
+    return this;
+  }
+
+  ActionButtonBuilder iconHeight(double iconHeight) {
     _iconHeight = iconHeight;
+    return this;
+  }
+
+  ActionButtonBuilder iconWidth(double iconWidth) {
     _iconWidth = iconWidth;
+    return this;
   }
 
   Widget build(BuildContext context) {
