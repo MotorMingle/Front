@@ -30,14 +30,14 @@ class GradientRadius {
 }
 
 class BorderRadius {
-  static const global = 35.0;
+  static const global = 28.0;
 
   const BorderRadius();
 }
 
 class ButtonSize {
-  static const width = 100.0;
-  static const height = 100.0;
+  static const width = 80.0;
+  static const height = 80.0;
 
   const ButtonSize();
 }

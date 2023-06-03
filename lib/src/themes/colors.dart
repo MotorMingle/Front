@@ -12,18 +12,21 @@ class AppColors {
 }
 
 class Colors {
-  static const yellow = Color(0xfff1c864);
-  static const lightOrange = Color(0xffeb9a3f);
-  static const orange = Color(0xffe2793f);
-  static const darkOrange = Color(0xffe5514c);
-  static const red = Color(0xffda2f24);
+  static const yellow = Color(0xfff9c74f);
+  static const lightOrange = Color(0xfff9c74f);
+  static const orange = Color(0xfff8961e);
+  static const darkOrange = Color(0xfff3722c);
+  static const red = Color(0xffed070b);
   static const transparent = Color(0x00000000);
-  static const red20 = Color(0x05c43a32);
-  static const red70 = Color(0x20c43a32);
-  static const deepRed = Color(0x508d1c24);
-  static const darkRed = Color(0x90320a17);
+  static const red20 = Color.fromRGBO(214, 40, 40, 0.05);
+  static const red70 = Color.fromRGBO(214, 40, 40, 0.4);
+  static const deepRed = Color.fromRGBO(154, 3, 30, 0.4);
+  static const darkRed = Color.fromRGBO(55, 6, 23, 0.5);
   static const lightGrey = Color(0xffe9e9ef);
-  static const grey = Color(0xff8c8cac);
+  static const grey = Color(0xff8c8caf);
+
+  static const deepR = Color(0xffc43a32);
+  static const darkR = Color(0xFF370617);
 
   const Colors();
 }
@@ -48,8 +51,8 @@ class GradientColors {
 }
 
 class GradientStops {
-  static const darkRedToTransparent = [0.0, 0.2, 0.5, 0.8, 1.0];
-  static const yellowToRed = [0.0, 0.2, 0.5, 0.8, 1.0];
+  static const darkRedToTransparent = [0.0606, 0.2072, 0.3649, 0.5011, 0.6604];
+  static const yellowToRed = [0.0, 0.2865, 0.526, 0.7656, 1.0];
 
   const GradientStops();
 }
