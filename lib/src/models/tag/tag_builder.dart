@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 
-class ButtonBuilder extends StatelessWidget {
+class TagBuilder extends StatelessWidget {
   late final Widget _child;
-  late final VoidCallback _onPressed;
   late final Color _backgroundColor;
   late final double _borderRadius;
 
@@ -12,27 +11,25 @@ class ButtonBuilder extends StatelessWidget {
   double? _paddingX;
   double? _paddingY;
 
-  ButtonBuilder(
+  TagBuilder(
     Widget child,
-    VoidCallback onPressed,
-    Color backgroundColor,
-    double borderRadius, {
+    double borderRadius,
+    Color backgroundColor, {
     super.key,
-    List<Gradient>? gradients,
     double? width,
     double? height,
     double? paddingX,
     double? paddingY,
+    List<Gradient>? gradients,
   }) {
     _child = child;
-    _onPressed = onPressed;
     _backgroundColor = backgroundColor;
     _borderRadius = borderRadius;
-    _gradients = gradients;
     _width = width;
     _height = height;
     _paddingX = paddingX;
     _paddingY = paddingY;
+    _gradients = gradients;
   }
 
   @override
@@ -40,9 +37,10 @@ class ButtonBuilder extends StatelessWidget {
     return Container(
       width: _width,
       height: _height,
+      alignment: _paddingX == null ? Alignment.center : null,
       padding: EdgeInsets.symmetric(
-        horizontal: _paddingX ?? 0,
-        vertical: _paddingY ?? 0,
+        horizontal: _paddingX ?? 0.0,
+        vertical: _paddingY ?? 0.0,
       ),
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(_borderRadius),
@@ -58,16 +56,7 @@ class ButtonBuilder extends StatelessWidget {
                 gradient: gradient,
               ),
             ),
-          Material(
-            color: Colors.transparent,
-            child: InkWell(
-              borderRadius: BorderRadius.circular(_borderRadius),
-              onTap: _onPressed,
-              child: Center(
-                child: _child,
-              ),
-            ),
-          ),
+          _child,
         ],
       ),
     );

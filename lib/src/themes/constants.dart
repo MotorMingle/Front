@@ -85,6 +85,21 @@ class ActionButton {
   const ActionButton();
 }
 
+class StatusTag {
+  static const width = 12.0;
+  static const height = 12.0;
+
+  const StatusTag();
+}
+
+class LabelTag {
+  static const paddingX = 10.0;
+  static const paddingY = 5.0;
+  static const fontSize = 12.0;
+
+  const LabelTag();
+}
+
 class SizedBoxSize {
   static const globalWidth = 50.0;
 
