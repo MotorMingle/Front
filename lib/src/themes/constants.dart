@@ -6,14 +6,14 @@ import 'colors.dart' as colors;
 @immutable
 class AppConstants {
   Gradient get gradient => const Gradient();
-  
+
   GradientAlignments get gradientAlignments => const GradientAlignments();
 
   GradientRadius get gradientRadius => const GradientRadius();
 
   BorderRadius get borderRadius => const BorderRadius();
 
-  MatchButtonSize get matchButtonSize => const MatchButtonSize();
+  MatchButton get matchButton => const MatchButton();
 
   ActionButton get actionButton => const ActionButton();
 
@@ -24,13 +24,13 @@ class AppConstants {
 
 class Gradient {
   static var primary = [
-    GradientBuilder(colors.GradientColors.yellowToRed,
-        colors.GradientStops.yellowToRed)
+    GradientBuilder(
+            colors.GradientColors.yellowToRed, colors.GradientStops.yellowToRed)
         .center(GradientAlignments.center)
         .radius(GradientRadius.global)
         .buildRadial(),
     GradientBuilder(colors.GradientColors.darkRedToTransparent,
-        colors.GradientStops.darkRedToTransparent)
+            colors.GradientStops.darkRedToTransparent)
         .begin(GradientAlignments.begin)
         .end(GradientAlignments.end)
         .buildLinear(),
@@ -59,11 +59,19 @@ class BorderRadius {
   const BorderRadius();
 }
 
-class MatchButtonSize {
+class MatchButton {
   static const width = 80.0;
   static const height = 80.0;
 
-  const MatchButtonSize();
+  const MatchButton();
+}
+
+class ChipButton {
+  static const width = 15.0;
+  static const height = 15.0;
+  static const borderRadius = 15.0;
+
+  const ChipButton();
 }
 
 class ActionButton {
@@ -72,6 +80,7 @@ class ActionButton {
   static const fontSize = 12.0;
   static const iconHeight = 12.0;
   static const iconWidth = 12.0;
+  static const sizeBoxWidth = 3.0;
 
   const ActionButton();
 }

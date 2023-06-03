@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:front/src/models/buttons/action_button_builder.dart';
+import 'package:front/src/models/buttons/chip_button_builder.dart';
 import 'package:front/src/models/buttons/match_button_builder.dart';
 import 'package:front/src/themes/app_theme.dart';
 import 'package:front/src/themes/colors.dart' as colors;
@@ -73,7 +74,15 @@ class _MyHomePageState extends State<MyHomePage> {
                     'Modifier mon profil',
                     colors.Colors.darkR,
                     () => logger.i('Edit button pressed'),
-                  ).build(context)
+                  ).build(context),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  ChipButtonBuilder(
+                    'assets/icons/close.svg',
+                    colors.Colors.white,
+                    () => logger.i('Plus button pressed'),
+                  ).gradients(constants.Gradient.primary).build(context)
                 ],
               ),
             ],
