@@ -6,7 +6,7 @@ import 'colors.dart' as colors;
 @immutable
 class AppConstants {
   Gradient get gradient => const Gradient();
-  
+
   GradientAlignments get gradientAlignments => const GradientAlignments();
 
   GradientRadius get gradientRadius => const GradientRadius();
@@ -24,13 +24,13 @@ class AppConstants {
 
 class Gradient {
   static var primary = [
-    GradientBuilder(colors.GradientColors.yellowToRed,
-        colors.GradientStops.yellowToRed)
+    GradientBuilder(
+            colors.GradientColors.yellowToRed, colors.GradientStops.yellowToRed)
         .center(GradientAlignments.center)
         .radius(GradientRadius.global)
         .buildRadial(),
     GradientBuilder(colors.GradientColors.darkRedToTransparent,
-        colors.GradientStops.darkRedToTransparent)
+            colors.GradientStops.darkRedToTransparent)
         .begin(GradientAlignments.begin)
         .end(GradientAlignments.end)
         .buildLinear(),
@@ -74,6 +74,21 @@ class ActionButton {
   static const iconWidth = 12.0;
 
   const ActionButton();
+}
+
+class StatusTag {
+  static const width = 12.0;
+  static const height = 12.0;
+
+  const StatusTag();
+}
+
+class LabelTag {
+  static const paddingX = 10.0;
+  static const paddingY = 5.0;
+  static const fontSize = 12.0;
+
+  const LabelTag();
 }
 
 class SizedBoxSize {
