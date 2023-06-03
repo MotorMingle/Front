@@ -17,21 +17,40 @@ class MatchButtonBuilder {
   MatchButtonBuilder(
     String iconPath,
     Color iconColor,
-    VoidCallback onPressed, {
-    Color? backgroundColor = colors.Colors.lightGrey,
-    List<Gradient>? gradients,
-    double? width = constants.MatchButtonSize.width / 2,
-    double? height = constants.MatchButtonSize.height / 2,
-    double? borderRadius = constants.BorderRadius.global,
-  }) {
+    VoidCallback onPressed,
+  ) {
     _iconPath = iconPath;
     _iconColor = iconColor;
     _onPressed = onPressed;
+    _backgroundColor = colors.Colors.lightGrey;
+    _width = constants.MatchButtonSize.width;
+    _height = constants.MatchButtonSize.height;
+    _borderRadius = constants.BorderRadius.global;
+  }
+
+  MatchButtonBuilder backgroundColor(Color backgroundColor) {
     _backgroundColor = backgroundColor;
+    return this;
+  }
+
+  MatchButtonBuilder gradients(List<Gradient> gradients) {
     _gradients = gradients;
+    return this;
+  }
+
+  MatchButtonBuilder width(double width) {
     _width = width;
+    return this;
+  }
+
+  MatchButtonBuilder height(double height) {
     _height = height;
+    return this;
+  }
+
+  MatchButtonBuilder borderRadius(double borderRadius) {
     _borderRadius = borderRadius;
+    return this;
   }
 
   Widget build(BuildContext context) {

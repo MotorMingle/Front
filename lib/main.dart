@@ -1,5 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:front/src/models/buttons/action_button_builder.dart';
+import 'package:front/src/models/buttons/match_button_builder.dart';
 import 'package:front/src/themes/app_theme.dart';
+import 'package:front/src/themes/colors.dart' as colors;
+import 'package:front/src/themes/constants.dart' as constants;
 import 'package:logger/logger.dart';
 
 void main() {
@@ -43,7 +47,34 @@ class _MyHomePageState extends State<MyHomePage> {
             children: <Widget>[
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
-                children: [],
+                children: [
+                  MatchButtonBuilder(
+                      'assets/icons/close.svg',
+                      colors.Colors.grey,
+                      () => logger.i('Close button pressed')).build(context),
+                  const SizedBox(
+                    width: 20,
+                  ),
+                  MatchButtonBuilder(
+                    'assets/icons/peace.svg',
+                    colors.Colors.white,
+                    () => logger.i('Peace button pressed'),
+                  ).gradients(constants.Gradient.primary).build(context),
+                ],
+              ),
+              const SizedBox(
+                height: 20,
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  ActionButtonBuilder(
+                    'assets/icons/edit.svg',
+                    'Modifier mon profil',
+                    colors.Colors.darkR,
+                    () => logger.i('Edit button pressed'),
+                  ).build(context)
+                ],
               ),
             ],
           ),

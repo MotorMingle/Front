@@ -23,6 +23,7 @@ class Colors {
   static const deepRed = Color.fromRGBO(154, 3, 30, 0.4);
   static const darkRed = Color.fromRGBO(55, 6, 23, 0.5);
   static const lightGrey = Color(0xffe9e9ef);
+  static const white = Color(0xffffffff);
   static const grey = Color(0xff8c8caf);
 
   static const deepR = Color(0xffc43a32);
