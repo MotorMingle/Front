@@ -8,7 +8,9 @@ class AppConstants {
 
   BorderRadius get borderRadius => const BorderRadius();
 
-  ButtonSize get buttonSize => const ButtonSize();
+  MatchButtonSize get matchButtonSize => const MatchButtonSize();
+
+  ActionButton get actionButton => const ActionButton();
 
   SizedBoxSize get sizedBoxSize => const SizedBoxSize();
 
@@ -35,11 +37,21 @@ class BorderRadius {
   const BorderRadius();
 }
 
-class ButtonSize {
+class MatchButtonSize {
   static const width = 80.0;
   static const height = 80.0;
 
-  const ButtonSize();
+  const MatchButtonSize();
+}
+
+class ActionButton {
+  static const paddingX = 20.0;
+  static const paddingY = 20.0;
+  static const fontSize = 20.0;
+  static const iconHeight = 20.0;
+  static const iconWidth = 20.0;
+
+  const ActionButton();
 }
 
 class SizedBoxSize {
