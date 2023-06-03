@@ -32,7 +32,7 @@ class GradientRadius {
 }
 
 class BorderRadius {
-  static const global = 35.0;
+  static const global = 28.0;
 
   const BorderRadius();
 }

@@ -11,6 +11,8 @@ class AppTheme {
   const AppTheme._();
 
   static ThemeData define() {
-    return ThemeData();
+    return ThemeData(
+      fontFamily: 'DMSans',
+    );
   }
 }
