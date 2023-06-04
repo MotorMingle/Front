@@ -25,7 +25,7 @@ class Colors {
   static const lightGrey = Color(0xffe9e9ef);
   static const white = Color(0xffffffff);
   static const grey = Color(0xff8c8caf);
-
+  static const greySuit = Color(0xffbbbbd0);
   static const deepR = Color(0xffc43a32);
   static const darkR = Color(0xFF370617);
 

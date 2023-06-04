@@ -17,6 +17,8 @@ class AppConstants {
 
   ActionButton get actionButton => const ActionButton();
 
+  IconText get iconText => const IconText();
+
   SizedBoxSize get sizedBoxSize => const SizedBoxSize();
 
   const AppConstants();
@@ -25,12 +27,12 @@ class AppConstants {
 class Gradient {
   static var primary = [
     GradientBuilder(
-            colors.GradientColors.yellowToRed, colors.GradientStops.yellowToRed)
+        colors.GradientColors.yellowToRed, colors.GradientStops.yellowToRed)
         .center(GradientAlignments.center)
         .radius(GradientRadius.global)
         .buildRadial(),
     GradientBuilder(colors.GradientColors.darkRedToTransparent,
-            colors.GradientStops.darkRedToTransparent)
+        colors.GradientStops.darkRedToTransparent)
         .begin(GradientAlignments.begin)
         .end(GradientAlignments.end)
         .buildLinear(),
@@ -98,6 +100,14 @@ class LabelTag {
   static const fontSize = 12.0;
 
   const LabelTag();
+}
+
+class IconText {
+  static const fontSize = 12.0;
+  static const iconHeight = 12.0;
+  static const iconWidth = 12.0;
+
+  const IconText();
 }
 
 class SizedBoxSize {

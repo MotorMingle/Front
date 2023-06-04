@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:front/src/models/buttons/action_button_builder.dart';
 import 'package:front/src/models/buttons/chip_button_builder.dart';
 import 'package:front/src/models/buttons/match_button_builder.dart';
+import 'package:front/src/models/iconText/icon_text_builder.dart';
 import 'package:front/src/models/tag/label_tag_builder.dart';
 import 'package:front/src/models/tag/status_tag_builder.dart';
 import 'package:front/src/themes/app_theme.dart';
@@ -81,7 +82,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ChipButtonBuilder(
                   'assets/icons/close.svg',
                   colors.Colors.white,
-                      () => logger.i('Plus button pressed'),
+                  () => logger.i('Plus button pressed'),
                 ).gradients(constants.Gradient.primary).build(context)
               ],
             ),
@@ -99,7 +100,23 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
                 LabelTagBuilder('Suzuki GSF 650 S').build(context),
               ],
-            )
+            ),
+            const SizedBox(
+              height: 20,
+            ),
+            Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                IconTextBuilder('Caen', 'assets/icons/location.svg')
+                    .build(context),
+                IconTextBuilder('CQ-831-WX', 'assets/icons/plate.svg')
+                    .build(context),
+                IconTextBuilder(
+                        '+ 14% vs hier', 'assets/icons/little-arrow.svg')
+                    .gradients(constants.Gradient.primary)
+                    .build(context),
+              ],
+            ),
           ],
         ),
       ),

@@ -26,6 +26,9 @@ flutter:
     - assets/icons/close.svg
     - assets/icons/home.svg
     - assets/icons/edit.svg
+    - assets/icons/location.svg
+    - assets/icons/plate.svg
+    - assets/icons/little-arrow.svg
   fonts:
     - family: DMSans
       fonts:
