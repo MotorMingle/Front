@@ -4,7 +4,7 @@ import 'package:front/src/models/buttons/button_builder.dart';
 import 'package:front/src/themes/colors.dart' as colors;
 import 'package:front/src/themes/constants.dart' as constants;
 
-class MatchButtonBuilder {
+class ChipButtonBuilder {
   late final String _iconPath; // Child widget
   late final Color _iconColor; // Child widget
   late final VoidCallback _onPressed;
@@ -14,7 +14,7 @@ class MatchButtonBuilder {
   double? _height;
   double? _borderRadius;
 
-  MatchButtonBuilder(
+  ChipButtonBuilder(
     String iconPath,
     Color iconColor,
     VoidCallback onPressed,
@@ -23,32 +23,32 @@ class MatchButtonBuilder {
     _iconColor = iconColor;
     _onPressed = onPressed;
     _backgroundColor = colors.Colors.lightGrey;
-    _width = constants.MatchButton.width;
-    _height = constants.MatchButton.height;
-    _borderRadius = constants.BorderRadius.global;
+    _width = constants.ChipButton.width;
+    _height = constants.ChipButton.height;
+    _borderRadius = constants.ChipButton.borderRadius;
   }
 
-  MatchButtonBuilder backgroundColor(Color backgroundColor) {
+  ChipButtonBuilder backgroundColor(Color backgroundColor) {
     _backgroundColor = backgroundColor;
     return this;
   }
 
-  MatchButtonBuilder gradients(List<Gradient> gradients) {
+  ChipButtonBuilder gradients(List<Gradient> gradients) {
     _gradients = gradients;
     return this;
   }
 
-  MatchButtonBuilder width(double width) {
+  ChipButtonBuilder width(double width) {
     _width = width;
     return this;
   }
 
-  MatchButtonBuilder height(double height) {
+  ChipButtonBuilder height(double height) {
     _height = height;
     return this;
   }
 
-  MatchButtonBuilder borderRadius(double borderRadius) {
+  ChipButtonBuilder borderRadius(double borderRadius) {
     _borderRadius = borderRadius;
     return this;
   }

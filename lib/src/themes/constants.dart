@@ -13,7 +13,7 @@ class AppConstants {
 
   BorderRadius get borderRadius => const BorderRadius();
 
-  MatchButtonSize get matchButtonSize => const MatchButtonSize();
+  MatchButton get matchButton => const MatchButton();
 
   ActionButton get actionButton => const ActionButton();
 
@@ -59,11 +59,19 @@ class BorderRadius {
   const BorderRadius();
 }
 
-class MatchButtonSize {
+class MatchButton {
   static const width = 80.0;
   static const height = 80.0;
 
-  const MatchButtonSize();
+  const MatchButton();
+}
+
+class ChipButton {
+  static const width = 15.0;
+  static const height = 15.0;
+  static const borderRadius = 15.0;
+
+  const ChipButton();
 }
 
 class ActionButton {
@@ -72,6 +80,7 @@ class ActionButton {
   static const fontSize = 12.0;
   static const iconHeight = 12.0;
   static const iconWidth = 12.0;
+  static const sizeBoxWidth = 3.0;
 
   const ActionButton();
 }
