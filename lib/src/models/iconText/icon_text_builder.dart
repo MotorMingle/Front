@@ -58,6 +58,7 @@ class IconTextBuilder {
 
   Widget build(BuildContext context) {
     return Row(
+      mainAxisAlignment: MainAxisAlignment.center,
       children: [
         _gradients == null
             ? SvgPicture.asset(
