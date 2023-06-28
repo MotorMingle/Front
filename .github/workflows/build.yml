@@ -8,7 +8,7 @@ on:
     types: [ opened, synchronize, reopened ]
 jobs:
   build:
-    name: Build and analyze
+    name: Build
     runs-on: macos-latest
     steps:
       - uses: actions/checkout@v3
@@ -27,6 +27,10 @@ jobs:
           restore-keys: ${{ runner.os }}-sonar
       - name: Install dependencies
         run: flutter pub get
+  analyze:
+    name: Analyze
+    runs-on: ubuntu-latest
+    steps:
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
