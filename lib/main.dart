@@ -1,28 +1,20 @@
+import 'package:authentication_repository/authentication_repository.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
-import 'package:front/src/pages/auth_page.dart';
-import 'package:front/src/themes/app_theme.dart';
-import 'package:logger/logger.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'firebase_options.dart';
+import 'app/app.dart';
 
-var logger = Logger();
-
-void main() async {
+Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
-  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform);
-  runApp(const MyApp());
-}
+  Bloc.observer = const AppBlocObserver();
 
-class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  await Firebase.initializeApp();
 
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      theme: AppTheme.define(),
-      home: const AuthPage(),
-      debugShowCheckedModeBanner: false,
-    );
-  }
+  final authenticationRepository = AuthenticationRepository();
+  await authenticationRepository.user.first;
+
+  runApp(MotorMingleApp(
+    authenticationRepository: authenticationRepository,
+  ));
 }
