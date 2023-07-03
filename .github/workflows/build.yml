@@ -21,6 +21,13 @@ jobs:
           channel: 'stable'
       - name: Install dependencies
         run: flutter pub get
+      - name: Test
+        run: flutter test --coverage
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+
   analyze:
     name: Analyze
     runs-on: ubuntu-latest
