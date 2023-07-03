@@ -24,8 +24,6 @@ jobs:
           package: egakcap
       - name: Build and analyze
         run: flutter pub get
-      - run: flutter packages pub run build_runner build
-      - run: flutter build aot
       - run: flutter analyze
       - run: flutter test --coverage
       - name: Upload coverage reports to Codecov
