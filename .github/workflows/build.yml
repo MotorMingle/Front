@@ -19,17 +19,22 @@ jobs:
         with:
           flutter-version: '3.10.5'
           channel: 'stable'
-      - name: Install dependencies
+      - uses: stelynx/dart-full-coverage@v1.1.1
+        with:
+          package: egakcap
+      - name: Build and analyze
         run: flutter pub get
-      - name: Test
-        run: flutter test --coverage
+      - run: flutter packages pub run build_runner build
+      - run: flutter build aot
+      - run: flutter analyze
+      - run: flutter test --coverage
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v1
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
 
   analyze:
-    name: Analyze
+    name: Analyze with SonarCloud
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
