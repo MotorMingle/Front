@@ -1,7 +1,4 @@
-import 'package:flutter/material.dart';
-
-import 'colors.dart' as colors;
-import 'gradient_builder.dart';
+part of 'theme.dart';
 
 @immutable
 class AppConstants {
@@ -23,18 +20,19 @@ class AppConstants {
 }
 
 class Gradient {
-  static var primary = [
-    GradientBuilder(
-            colors.GradientColors.yellowToRed, colors.GradientStops.yellowToRed)
-        .center(GradientAlignments.center)
-        .radius(GradientRadius.global)
-        .buildRadial(),
-    GradientBuilder(colors.GradientColors.darkRedToTransparent,
-            colors.GradientStops.darkRedToTransparent)
-        .begin(GradientAlignments.begin)
-        .end(GradientAlignments.end)
-        .buildLinear(),
-  ];
+  static var foregroundGradient = const LinearGradient(
+    colors: GradientColors.foregroundGradient,
+    stops: GradientStops.foregroundGradient,
+    begin: GradientAlignments.begin,
+    end: GradientAlignments.end,
+  );
+
+  static var backgroundGradient = const LinearGradient(
+    colors: GradientColors.backgroundGradient,
+    stops: GradientStops.backgroundGradient,
+    begin: GradientAlignments.begin,
+    end: GradientAlignments.end,
+  );
 
   const Gradient();
 }

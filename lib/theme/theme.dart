@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-import 'colors.dart';
-import 'constants.dart';
+part 'colors.dart';
+part 'constants.dart';
 
 @immutable
 class AppTheme {

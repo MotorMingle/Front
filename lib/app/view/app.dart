@@ -38,7 +38,21 @@ class AppView extends StatelessWidget {
       title: 'Authentication',
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      theme: ThemeData(primarySwatch: Colors.indigo),
+      theme: ThemeData(
+        colorScheme: const ColorScheme.dark(
+          primary: Color(0xFFEEFC07),
+          secondary: Color(0xFFFBFC00),
+          background: Colors.black,
+          surface: Colors.black,
+          brightness: Brightness.dark,
+          error: Colors.red,
+          onPrimary: Colors.black87,
+          onSecondary: Colors.black87,
+          onBackground: Colors.black87,
+          onSurface: Colors.white,
+          onError: Colors.white,
+        ),
+      ),
       home: FlowBuilder<AppStatus>(
         state: context.select((AppBloc bloc) => bloc.state.status),
         onGeneratePages: onGenerateAppViewPages,
