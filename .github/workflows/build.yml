@@ -20,10 +20,10 @@ jobs:
           flutter-version: '3.10.5'
           channel: 'stable'
       - name: Build and analyze
-      - run: flutter pub get
-      - run: dart pub global activate full_coverage
-      - run: dart pub global run full_coverage
-      - run: flutter test --coverage
+        run: flutter pub get
+        run: dart pub global activate full_coverage
+        run: dart pub global run full_coverage
+        run: flutter test --coverage
       - name: Upload coverage reports to Codecov
         uses: codecov/codecov-action@v1
         with:
