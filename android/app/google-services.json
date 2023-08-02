@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "559996447813",
+    "project_id": "motor-mingle-auth",
+    "storage_bucket": "motor-mingle-auth.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:559996447813:android:f5f14a4d8268b65653872c",
+        "android_client_info": {
+          "package_name": "fr.motormingle.front"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "559996447813-gseq845ds134lolsfd1sks2t9b27ud80.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDsSufWbG3PSr6hjjFJRo-goFrz-sh_oyM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "559996447813-gseq845ds134lolsfd1sks2t9b27ud80.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "559996447813-kmfe07nfs0q9ahge7nbhoknaun3hg77s.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "fr.motormingle.front"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
