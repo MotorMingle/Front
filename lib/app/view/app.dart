@@ -11,9 +11,11 @@ class MotorMingleApp extends StatelessWidget {
   const MotorMingleApp({
     Key? key,
     required this.authenticationRepository,
+    required this.theme,
   }) : super(key: key);
 
   final AuthenticationRepository authenticationRepository;
+  final ThemeData theme;
 
   @override
   Widget build(BuildContext context) {
@@ -23,14 +25,17 @@ class MotorMingleApp extends StatelessWidget {
         create: (_) => AppBloc(
           authenticationRepository: authenticationRepository,
         ),
-        child: const AppView(),
+        child: AppView(
+          theme: theme,
+        ),
       ),
     );
   }
 }
 
 class AppView extends StatelessWidget {
-  const AppView({Key? key}) : super(key: key);
+  const AppView({Key? key, required this.theme}) : super(key: key);
+  final ThemeData theme;
 
   @override
   Widget build(BuildContext context) {
@@ -38,21 +43,7 @@ class AppView extends StatelessWidget {
       title: 'Authentication',
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      theme: ThemeData(
-        colorScheme: const ColorScheme.dark(
-          primary: Color(0xFFEEFC07),
-          secondary: Color(0xFFFBFC00),
-          background: Colors.black,
-          surface: Colors.black,
-          brightness: Brightness.dark,
-          error: Colors.red,
-          onPrimary: Colors.black87,
-          onSecondary: Colors.black87,
-          onBackground: Colors.black87,
-          onSurface: Colors.white,
-          onError: Colors.white,
-        ),
-      ),
+      theme: theme,
       home: FlowBuilder<AppStatus>(
         state: context.select((AppBloc bloc) => bloc.state.status),
         onGeneratePages: onGenerateAppViewPages,

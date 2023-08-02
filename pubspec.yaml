@@ -25,6 +25,8 @@ dependencies:
   flutter_localizations:
     sdk: flutter
   intl: any
+  firebase_remote_config: ^4.2.3
+  firebase_analytics: ^10.4.3
 
 dev_dependencies:
   flutter_test:

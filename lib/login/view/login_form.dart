@@ -4,6 +4,7 @@ import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:flutter_svg/svg.dart';
 import 'package:formz/formz.dart';
 
+import '../../theme/theme.dart';
 import '../cubit/login_cubit.dart';
 
 class LoginForm extends StatelessWidget {
@@ -42,7 +43,12 @@ class LoginForm extends StatelessWidget {
 class _GoogleLoginButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final appTheme = Theme.of(context).extension<AppTheme>()!;
     return ElevatedButton.icon(
+      style: ElevatedButton.styleFrom(
+        foregroundColor: appTheme.backgroundSecondaryColor,
+        backgroundColor: appTheme.primaryColor,
+      ),
       key: const Key('loginForm_googleLogin_raisedButton'),
       label: Text(
         AppLocalizations.of(context)!.loginWithGoogle,
